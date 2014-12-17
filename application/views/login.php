@@ -3,7 +3,7 @@
       <div class="row">
           <div class="col-lg-12 text-center">
           <br/><br/>
-              <h2>Sign Up</h2>
+              <h2>Log In</h2>
               <hr class="star-primary">
           </div>
       </div>

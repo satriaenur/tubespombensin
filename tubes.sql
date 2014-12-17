@@ -1,13 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 3.4.5
+-- version 4.2.7.1
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Waktu pembuatan: 13. Desember 2014 jam 01:48
--- Versi Server: 5.5.16
--- Versi PHP: 5.3.8
+-- Generation Time: Dec 17, 2014 at 04:23 
+-- Server version: 5.6.20
+-- PHP Version: 5.5.15
 
-SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
 
@@ -23,31 +23,61 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `pombensin`
+-- Table structure for table `pombensin`
 --
 
 CREATE TABLE IF NOT EXISTS `pombensin` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+`id` int(11) NOT NULL,
   `nama` varchar(150) NOT NULL,
   `alamat` text NOT NULL,
   `latitude` text NOT NULL,
   `longitude` text NOT NULL,
-  `foto` varchar(50) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
+  `foto` varchar(50) NOT NULL
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
+
+-- --------------------------------------------------------
 
 --
--- Dumping data untuk tabel `pombensin`
+-- Table structure for table `user`
 --
 
-INSERT INTO `pombensin` (`id`, `nama`, `alamat`, `latitude`, `longitude`, `foto`) VALUES
-(1, 'Pom Dekat Kampus', 'Jl. Telekomunikasi No.2', '-6.9749149', '107.631823', 'pom-bensin1.jpg'),
-(2, 'pom lumayan dekat', 'Jl. Telekomunikasi No 6 Bandung', '-6.9849256', '107.6268057', 'pom-bensin2.jpg'),
-(3, 'Pom Bensing Padamara', 'Jl. Telekomunikasi No 10 Bandung', '-6.9752771', '107.6186129', 'pom-bensin3.jpg'),
-(4, 'Pom Bensin Bojong', 'Jl. Bojong Soang Raya No.4', '-6.9733204', '107.6365469', 'pom-bensin4.jpg'),
-(5, 'Pom Bensin Sukapura', 'Jl. Sukapura No.3', '-6.9678405', '107.6346673', 'pom-bensin5.jpg'),
-(6, 'Pom Bensin Sukabirus', 'Jl.Suka Birus No.1', '-6.9819632', '107.6289721', 'pom-bensin6.jpg');
+CREATE TABLE IF NOT EXISTS `user` (
+`user_id` int(11) NOT NULL,
+  `user_username` varchar(50) NOT NULL,
+  `user_password` varchar(50) NOT NULL,
+  `user_nama` varchar(50) NOT NULL
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
 
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `pombensin`
+--
+ALTER TABLE `pombensin`
+ ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `user`
+--
+ALTER TABLE `user`
+ ADD PRIMARY KEY (`user_id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `pombensin`
+--
+ALTER TABLE `pombensin`
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=8;
+--
+-- AUTO_INCREMENT for table `user`
+--
+ALTER TABLE `user`
+MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
